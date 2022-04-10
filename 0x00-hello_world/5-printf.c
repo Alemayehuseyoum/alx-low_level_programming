@@ -1,12 +1,11 @@
 #include <stdio.h>
-
 /**
- *  main - Entry point 
- *
- *  Return: Always 0 (Success)
+ * main - Entry point
+ *My hello, printf task
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-printf("with proper grammar, but the outcome is a piece of art,\n");
-return (0);
+printf("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
+return (1);
 }
