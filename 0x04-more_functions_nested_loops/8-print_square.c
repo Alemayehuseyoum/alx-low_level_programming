@@ -1,28 +1,29 @@
 #include "main.h"
 
 /**
- * jack_bauer -prints every minute of the day
- *
+ * print_square - prints a square
+ * @size: the size of the square
  * Return: Always 0.
  */
 
-void jack_bauer(void)
+void print_square(int size)
 
 {
-int s;
-int t;
+	int a, b;
 
-for (s = 0; s <= 23; s++)
-{
-for (t = 0; t <= 59; t++)
-{
-_putchar (s / 10 + '0');
-_putchar (s % 10 + '0');
-_putchar (':');
-_putchar (t / 10 + '0');
-_putchar (t % 10 + '0');
-_putchar ('\n');
-
-}
-}
+	if (size > 0)
+	{
+	for (a = 0; a < size; a++)
+	{
+	for (b = 0; b < size; b++)
+	{
+	_putchar('#');
+	}
+	_putchar('\n');
+	}
+	}
+	else
+	{
+		_putchar('\n');
+	}
 }
