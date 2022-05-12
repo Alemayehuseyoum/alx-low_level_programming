@@ -1,28 +1,71 @@
 #include "3-calc.h"
 
 /**
- * main - performs simple operations
- * @argc: argument count
- * @argv: argument vector
- * Return: 1 for success
+ * op_add - adds two integers
+ * @a: first integer
+ * @b: second integer
+ * Return: sum of two integers
  */
 
-int main(int argc, char *argv[])
+int op_add(int a, int b)
 {
-	register int a, b;
-	int (*fptr)(int, int);
+	return (a + b);
+}
 
-	if (argc != 4)
+/**
+ * op_sub - subtracts two integers
+ * @a: first integer
+ * @b: second integer
+ * Return: difference of two integers
+ */
+
+int op_sub(int a, int b)
+{
+	return (a - b);
+}
+
+/**
+ * op_mul - multiply two integers
+ * @a: first integer
+ * @b: second integer
+ * Return: product of two integers
+ */
+
+int op_mul(int a, int b)
+{
+	return (a * b);
+}
+
+/**
+ * op_div - divides two integers
+ * @a: first integer
+ * @b: second integer
+ * Return: quotient of two integers
+ */
+
+int op_div(int a, int b)
+{
+	if (!b)
 	{
-		printf("Error\n"), exit(98);
+		printf("Error\n");
+		exit(100);
 	}
-	fptr = get_op_func(argv[2]);
-	if (!fptr)
+	return (a / b);
+}
+
+/**
+ * op_mod - calculates modulus two integers
+ * @a: first integer
+ * @b: second integer
+ * Return: modulus of two integers
+ */
+
+int op_mod(int a, int b)
+{
+	if (!b)
 	{
-		printf("Error\n"), exit(99);
+		printf("Error\n");
+		exit(100);
 	}
-	a = atoi(argv[1]);
-	b = atoi(argv[3]);
-	printf("%i\n", fptr(a, b));
-	return (1);
+	return (a % b);
 }
