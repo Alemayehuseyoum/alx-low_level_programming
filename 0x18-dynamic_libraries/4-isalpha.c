@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isalpha - Return 1 if c is a letter capital or small
+ * _isalpha - Return 1 if c is a letter cpital or small
  *
  * Return: Always 0
  *@c: the letter
